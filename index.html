@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('2121.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 20px;
+}
+
+.container {
+    padding: 30px;
+}
+
+h1, h2, p {
+    animation: fadeIn 1s ease-in-out;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #ff3366;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #cc0052;
+}
+
+.hidden {
+    display: none;
+}
+
+img {
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- START -->
+<div id="start">
+    <h1>💌 Hey Rizin...</h1>
+    <p><strong> isn't just a website... it's our story.</strong></p>
+    <button onclick="next('scene1')">Start Journey</button>
+</div>
+
+<!-- SCENE 1 -->
+<div id="scene1" class="hidden">
+    <h2>Chapter 1: The Beginning 🌙</h2>
+    <p>Do you remember when we first met?</p>
+    <button onclick="next('s1_yes')">Yes ❤️</button>
+    <button onclick="next('s1_no')">A little 😅</button>
+</div>
+
+<div id="s1_yes" class="hidden">
+    <p>I knew something was different about you that day...</p>
+    <button onclick="next('scene2')">Continue</button>
+</div>
+
+<div id="s1_no" class="hidden">
+    <p>Then let me remind you... it was the start of everything 💖</p>
+    <button onclick="next('scene2')">Continue</button>
+</div>
+
+<!-- SCENE 2 -->
+<div id="scene2" class="hidden">
+    <h2>Chapter 2: Getting Closer ✨</h2>
+    <p>What made you stay?</p>
+    <button onclick="next('s2_love')">Your care 💞</button>
+    <button onclick="next('s2_fun')">Your craziness 🤪</button>
+    <button onclick="next('s2_both')">Everything 😳</button>
+</div>
+
+<div id="s2_love" class="hidden">
+    <p>Then I promise... I'll always take care of you ❤️</p>
+    <button onclick="next('scene3')">Next</button>
+</div>
+
+<div id="s2_fun" class="hidden">
+    <p>Only crazy for you 😌</p>
+    <button onclick="next('scene3')">Next</button>
+</div>
+
+<div id="s2_both" class="hidden">
+    <p>Perfect... just like us 💕</p>
+    <button onclick="next('scene3')">Next</button>
+</div>
+
+<!-- SCENE 3 -->
+<div id="scene3" class="hidden">
+    <h2>Chapter 3: The Distance 🌍</h2>
+    <p>Even when we are far apart...</p>
+    <button onclick="next('s3_miss')">I miss you 😔</button>
+    <button onclick="next('s3_strong')">We stay strong 💪</button>
+</div>
+
+<div id="s3_miss" class="hidden">
+    <p>I miss you more than words can explain...</p>
+    <button onclick="next('scene4')">Continue</button>
+</div>
+
+<div id="s3_strong" class="hidden">
+    <p>Nothing can break us 💖</p>
+    <button onclick="next('scene4')">Continue</button>
+</div>
+
+<!-- SCENE 4 -->
+<div id="scene4" class="hidden">
+    <h2>Chapter 4: The Promise 💍</h2>
+    <p>If life gets hard...</p>
+    <button onclick="next('s4_stay')">Stay with me ❤️</button>
+    <button onclick="next('s4_run')">Run away together 😳</button>
+</div>
+
+<div id="s4_stay" class="hidden">
+    <p>I will never leave your side.</p>
+    <button onclick="next('scene5')">Next</button>
+</div>
+
+<div id="s4_run" class="hidden">
+    <p>Anywhere with you feels like home 💞</p>
+    <button onclick="next('scene5')">Next</button>
+</div>
+
+<!-- SCENE 5 -->
+<div id="scene5" class="hidden">
+    <h2>Final Chapter: The Truth ❤️</h2>
+    <p>So tell me...</p>
+    <button onclick="next('yesLove')">Do you love me? ❤️</button>
+    <button onclick="next('secret')">Open Secret 🔐</button>
+</div>
+
+<div id="yesLove" class="hidden">
+    <h1>I Love You More Than Anything 💖</h1>
+    <p>
+        No matter what happens...  
+        I will always choose you.  
+        Every single day.  
+    </p>
+    <h2>— Zaber ❤️</h2>
+</div>
+
+<div id="secret" class="hidden">
+    <h2>🔐 Secret Message</h2>
+    <p>You are my favorite notification, my peace, my chaos, my everything.</p>
+    <p>I’m lucky to have you... always.</p>
+</div>
+
+</div>
+
+<script>
+function next(id) {
+    let sections = document.querySelectorAll('.container > div');
+    sections.forEach(sec => sec.classList.add('hidden'));
+
+    document.getElementById(id).classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
