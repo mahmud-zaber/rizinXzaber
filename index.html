@@ -3,56 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Story ❤️</title>
+<title>50 Levels of Us ❤️</title>
 
 <style>
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-image: url('2121.jpg');
+    background-image: url("22.avif");
     background-repeat: no-repeat;
     background-size: cover;
-    color: whitesmoke;
     text-align: center;
     font-size: 20px;
+    color: black;
+    text-align: center;
 }
 
 .container {
     padding: 30px;
 }
 
-h1, h2, p {
-    animation: fadeIn 1s ease-in-out;
-}
-
 button {
     padding: 12px 25px;
     margin: 10px;
     border: none;
-    border-radius: 20px;
-    background: #ff3366;
+    border-radius: 25px;
+    background: #ff4d6d;
     color: white;
     font-size: 16px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #cc0052;
+    transform: scale(1.1);
 }
 
 .hidden {
     display: none;
 }
 
-img {
-    width: 200px;
-    border-radius: 20px;
-    margin-top: 15px;
+h1 {
+    color: black;
 }
 
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+.progress {
+    margin-top: 20px;
+    font-size: 18px;
 }
 </style>
 </head>
@@ -61,123 +56,115 @@ img {
 
 <div class="container">
 
-<!-- START -->
 <div id="start">
-    <h1>💌 Hey Rizin...</h1>
-    <p><strong> isn't just a website... it's our story.</strong></p>
-    <button onclick="next('scene1')">Start Journey</button>
+    <h1>💖 50 Levels of Us 💖</h1>
+    <p>Happy 9 Months Anniversary Rizin ❤️</p>
+    <button onclick="startGame()">Start Journey</button>
 </div>
 
-<!-- SCENE 1 -->
-<div id="scene1" class="hidden">
-    <h2>Chapter 1: The Beginning 🌙</h2>
-    <p>Do you remember when we first met?</p>
-    <button onclick="next('s1_yes')">Yes ❤️</button>
-    <button onclick="next('s1_no')">A little 😅</button>
+<div id="game" class="hidden">
+    <h2 id="levelTitle"></h2>
+    <p id="message"></p>
+    <button onclick="nextLevel()">Next ➜</button>
+
+    <div class="progress">
+        <p id="progress"></p>
+    </div>
 </div>
 
-<div id="s1_yes" class="hidden">
-    <p>I knew something was different about you that day...</p>
-    <button onclick="next('scene2')">Continue</button>
-</div>
-
-<div id="s1_no" class="hidden">
-    <p>Then let me remind you... it was the start of everything 💖</p>
-    <button onclick="next('scene2')">Continue</button>
-</div>
-
-<!-- SCENE 2 -->
-<div id="scene2" class="hidden">
-    <h2>Chapter 2: Getting Closer ✨</h2>
-    <p>What made you stay?</p>
-    <button onclick="next('s2_love')">Your care 💞</button>
-    <button onclick="next('s2_fun')">Your craziness 🤪</button>
-    <button onclick="next('s2_both')">Everything 😳</button>
-</div>
-
-<div id="s2_love" class="hidden">
-    <p>Then I promise... I'll always take care of you ❤️</p>
-    <button onclick="next('scene3')">Next</button>
-</div>
-
-<div id="s2_fun" class="hidden">
-    <p>Only crazy for you 😌</p>
-    <button onclick="next('scene3')">Next</button>
-</div>
-
-<div id="s2_both" class="hidden">
-    <p>Perfect... just like us 💕</p>
-    <button onclick="next('scene3')">Next</button>
-</div>
-
-<!-- SCENE 3 -->
-<div id="scene3" class="hidden">
-    <h2>Chapter 3: The Distance 🌍</h2>
-    <p>Even when we are far apart...</p>
-    <button onclick="next('s3_miss')">I miss you 😔</button>
-    <button onclick="next('s3_strong')">We stay strong 💪</button>
-</div>
-
-<div id="s3_miss" class="hidden">
-    <p>I miss you more than words can explain...</p>
-    <button onclick="next('scene4')">Continue</button>
-</div>
-
-<div id="s3_strong" class="hidden">
-    <p>Nothing can break us 💖</p>
-    <button onclick="next('scene4')">Continue</button>
-</div>
-
-<!-- SCENE 4 -->
-<div id="scene4" class="hidden">
-    <h2>Chapter 4: The Promise 💍</h2>
-    <p>If life gets hard...</p>
-    <button onclick="next('s4_stay')">Stay with me ❤️</button>
-    <button onclick="next('s4_run')">Run away together 😳</button>
-</div>
-
-<div id="s4_stay" class="hidden">
-    <p>I will never leave your side.</p>
-    <button onclick="next('scene5')">Next</button>
-</div>
-
-<div id="s4_run" class="hidden">
-    <p>Anywhere with you feels like home 💞</p>
-    <button onclick="next('scene5')">Next</button>
-</div>
-
-<!-- SCENE 5 -->
-<div id="scene5" class="hidden">
-    <h2>Final Chapter: The Truth ❤️</h2>
-    <p>So tell me...</p>
-    <button onclick="next('yesLove')">Do you love me? ❤️</button>
-    <button onclick="next('secret')">Open Secret 🔐</button>
-</div>
-
-<div id="yesLove" class="hidden">
-    <h1>I Love You More Than Anything 💖</h1>
+<div id="end" class="hidden">
+    <h1>🎉 LEVEL 50 COMPLETE 🎉</h1>
     <p>
-        No matter what happens...  
-        I will always choose you.  
-        Every single day.  
+        9 months with you...  
+        and I still fall for you every single day.  
+        You are my peace, my chaos, my everything.  
     </p>
-    <h2>— Zaber ❤️</h2>
-</div>
-
-<div id="secret" class="hidden">
-    <h2>🔐 Secret Message</h2>
-    <p>You are my favorite notification, my peace, my chaos, my everything.</p>
-    <p>I’m lucky to have you... always.</p>
+    <h2>I Love You Rizin ❤️</h2>
+    <h3>— Zaber</h3>
 </div>
 
 </div>
 
 <script>
-function next(id) {
-    let sections = document.querySelectorAll('.container > div');
-    sections.forEach(sec => sec.classList.add('hidden'));
+let level = 1;
 
-    document.getElementById(id).classList.remove('hidden');
+const messages = [
+"From the first moment... something felt different.",
+"You slowly became my favorite person.",
+"I started smiling more because of you.",
+"You made ordinary days special.",
+"I got addicted to talking to you.",
+"You became my peace.",
+"You became my chaos too 😌",
+"I miss you even when we just talked.",
+"You live in my thoughts.",
+"I realized I care too much ❤️",
+
+"You are my comfort.",
+"I trust you more than anyone.",
+"I feel safe with you.",
+"I love your voice.",
+"I love your smile.",
+"I love your little things.",
+"I love your anger too 😳",
+"I love your craziness 🤪",
+"I love everything about you.",
+"You became my habit.",
+
+"I don’t want to lose you.",
+"I want you in my future.",
+"I imagine us together.",
+"You make me dream.",
+"You make me strong.",
+"You make me soft.",
+"You understand me.",
+"You complete me.",
+"You changed me.",
+"You made me better.",
+
+"Distance can't break us.",
+"I miss you more everyday.",
+"I think about you at night.",
+"I wish you were here.",
+"I want to hold you.",
+"I want to see you smile.",
+"I want to be with you.",
+"I want forever with you.",
+"You are my home.",
+"You are my world.",
+
+"And today...",
+"It’s our 9 months ❤️",
+"And I still choose you.",
+"Every single day.",
+"No matter what happens...",
+"I will stay.",
+"I will fight for us.",
+"I will love you endlessly.",
+"You are mine ❤️",
+"And I am yours."
+];
+
+function startGame() {
+    document.getElementById("start").classList.add("hidden");
+    document.getElementById("game").classList.remove("hidden");
+    updateLevel();
+}
+
+function updateLevel() {
+    document.getElementById("levelTitle").innerText = "Level " + level;
+    document.getElementById("message").innerText = messages[level - 1];
+    document.getElementById("progress").innerText = "Progress: " + level + "/50";
+}
+
+function nextLevel() {
+    level++;
+    if(level > 50) {
+        document.getElementById("game").classList.add("hidden");
+        document.getElementById("end").classList.remove("hidden");
+    } else {
+        updateLevel();
+    }
 }
 </script>
 
