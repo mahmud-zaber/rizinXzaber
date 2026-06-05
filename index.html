@@ -3,169 +3,337 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>50 Levels of Us ❤️</title>
+<title>For My Love ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-image: url("22.avif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    font-size: 20px;
-    color: black;
-    text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-.container {
-    padding: 30px;
+body{
+    background:linear-gradient(135deg,#1a001f,#330033,#4d004d);
+    color:white;
+    overflow-x:hidden;
 }
 
-button {
-    padding: 12px 25px;
-    margin: 10px;
-    border: none;
-    border-radius: 25px;
-    background: #ff4d6d;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
 }
 
-button:hover {
-    transform: scale(1.1);
+h1{
+    font-family:'Dancing Script',cursive;
+    font-size:5rem;
+    color:#ff9fd6;
+    margin-bottom:20px;
 }
 
-.hidden {
-    display: none;
+.subtitle{
+    font-size:1.2rem;
+    max-width:700px;
+    line-height:1.8;
+    color:#f7d9e8;
 }
 
-h1 {
-    color: black;
+.btn{
+    margin-top:40px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#ff4fa3;
+    color:white;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.3s;
 }
 
-.progress {
-    margin-top: 20px;
-    font-size: 18px;
+.btn:hover{
+    transform:scale(1.08);
+}
+
+.section{
+    padding:100px 10%;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:40px;
+    margin-bottom:40px;
+    box-shadow:0 0 20px rgba(255,105,180,.15);
+}
+
+.card h2{
+    color:#ff9fd6;
+    margin-bottom:20px;
+}
+
+.card p{
+    line-height:2;
+    color:#ffeef7;
+}
+
+.love-letter{
+    font-size:1.1rem;
+}
+
+.reasons{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.reason{
+    background:rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:20px;
+}
+
+.reason h3{
+    color:#ff9fd6;
+    margin-bottom:10px;
+}
+
+.final{
+    text-align:center;
+    padding:100px 10%;
+}
+
+.final h2{
+    font-family:'Dancing Script',cursive;
+    font-size:4rem;
+    color:#ff9fd6;
+}
+
+.final p{
+    max-width:800px;
+    margin:20px auto;
+    line-height:2;
+}
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    top:0;
+    left:0;
+}
+
+.heart{
+    position:absolute;
+    color:#ff5ca8;
+    animation:float linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+
+.hidden{
+    display:none;
+}
+
+@media(max-width:768px){
+    h1{
+        font-size:3rem;
+    }
 }
 </style>
 </head>
-
 <body>
 
-<div class="container">
+<div class="hearts"></div>
 
-<div id="start">
-    <h1>💖 50 Levels of Us 💖</h1>
-    <p>Happy 9 Months Anniversary Rizin ❤️</p>
-    <button onclick="startGame()">Start Journey</button>
-</div>
+<section class="hero">
+    <h1>To My Beautiful Girl ❤️</h1>
 
-<div id="game" class="hidden">
-    <h2 id="levelTitle"></h2>
-    <p id="message"></p>
-    <button onclick="nextLevel()">Next ➜</button>
-
-    <div class="progress">
-        <p id="progress"></p>
-    </div>
-</div>
-
-<div id="end" class="hidden">
-    <h1>🎉 LEVEL 50 COMPLETE 🎉</h1>
-    <p>
-        9 months with you...  
-        and I still fall for you every single day.  
-        You are my peace, my chaos, my everything.  
+    <p class="subtitle">
+        This page isn't just an apology.
+        It's everything I should have said, everything I should have understood,
+        and everything I want you to know from my heart.
     </p>
-    <h2>I Love You Rizin ❤️</h2>
-    <h3>— Zaber</h3>
-</div>
+
+    <button class="btn" onclick="showMessage()">
+        Open My Heart 💌
+    </button>
+</section>
+
+<div id="content" class="hidden">
+
+<section class="section">
+    <div class="card">
+        <h2>I'm Sorry ❤️</h2>
+
+        <p class="love-letter">
+            My love,
+
+            I know I wasn't there for you the way I should have been.
+            During a time when you were already dealing with pain,
+            discomfort, exhaustion, and emotions that can feel overwhelming,
+            you deserved more understanding, more patience, and more support from me.
+
+            Looking back, I realize that I didn't give you the comfort you needed.
+            I didn't check on you enough.
+            I didn't make you feel as cared for as you deserved.
+
+            And for that, I am truly sorry.
+
+            Not because I was forced to say it.
+            Not because I want to fix things quickly.
+
+            But because I genuinely understand that I hurt someone I deeply love.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>What I Want You To Know 🌸</h2>
+
+        <p>
+            Even on the days when you feel tired,
+            emotional,
+            irritated,
+            exhausted,
+            or completely drained...
+
+            You never become difficult to love.
+
+            You never become a burden.
+
+            You never become "too much."
+
+            You deserve kindness.
+            You deserve patience.
+            You deserve understanding.
+
+            Most importantly,
+            you deserve someone who stays beside you through all of it.
+
+            I want to be that person.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Things I Love About You ❤️</h2>
+
+        <div class="reasons">
+            <div class="reason">
+                <h3>Your Smile</h3>
+                <p>It can turn my worst day into my best day.</p>
+            </div>
+
+            <div class="reason">
+                <h3>Your Heart</h3>
+                <p>You care so deeply about the people you love.</p>
+            </div>
+
+            <div class="reason">
+                <h3>Your Strength</h3>
+                <p>You handle more than most people realize.</p>
+            </div>
+
+            <div class="reason">
+                <h3>Your Presence</h3>
+                <p>You make ordinary moments feel special.</p>
+            </div>
+
+            <div class="reason">
+                <h3>Your Kindness</h3>
+                <p>The world becomes softer because you're in it.</p>
+            </div>
+
+            <div class="reason">
+                <h3>Everything About You</h3>
+                <p>Simply because you're you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <h2>I Love You ❤️</h2>
+
+    <p>
+        I can't change the moments when I failed to support you properly.
+        But I can learn from them.
+
+        I can listen better.
+
+        I can care better.
+
+        I can be more present.
+
+        I can be the partner you deserve.
+
+        Thank you for loving me even when I'm imperfect.
+
+        Thank you for being patient with me.
+
+        And if your heart allows it,
+        I'd love the chance to make things right.
+    </p>
+
+    <br>
+
+    <h3 style="color:#ff9fd6;font-size:2rem;">
+        Forever Yours ❤️
+    </h3>
+
+    <p style="font-size:1.3rem;">
+        — Zaber
+    </p>
+</section>
 
 </div>
 
 <script>
-let level = 1;
 
-const messages = [
-"From the first moment... something felt different.",
-"You slowly became my favorite person.",
-"I started smiling more because of you.",
-"You made ordinary days special.",
-"I got addicted to talking to you.",
-"You became my peace.",
-"You became my chaos too 😌",
-"I miss you even when we just talked.",
-"You live in my thoughts.",
-"I realized I care too much ❤️",
-
-"You are my comfort.",
-"I trust you more than anyone.",
-"I feel safe with you.",
-"I love your voice.",
-"I love your smile.",
-"I love your little things.",
-"I love your anger too 😳",
-"I love your craziness 🤪",
-"I love everything about you.",
-"You became my habit.",
-
-"I don’t want to lose you.",
-"I want you in my future.",
-"I imagine us together.",
-"You make me dream.",
-"You make me strong.",
-"You make me soft.",
-"You understand me.",
-"You complete me.",
-"You changed me.",
-"You made me better.",
-
-"Distance can't break us.",
-"I miss you more everyday.",
-"I think about you at night.",
-"I wish you were here.",
-"I want to hold you.",
-"I want to see you smile.",
-"I want to be with you.",
-"I want forever with you.",
-"You are my home.",
-"You are my world.",
-
-"And today...",
-"It’s our 9 months ❤️",
-"And I still choose you.",
-"Every single day.",
-"No matter what happens...",
-"I will stay.",
-"I will fight for us.",
-"I will love you endlessly.",
-"You are mine ❤️",
-"And I am yours."
-];
-
-function startGame() {
-    document.getElementById("start").classList.add("hidden");
-    document.getElementById("game").classList.remove("hidden");
-    updateLevel();
+function showMessage(){
+    document.getElementById('content').classList.remove('hidden');
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior:'smooth'
+    });
 }
 
-function updateLevel() {
-    document.getElementById("levelTitle").innerText = "Level " + level;
-    document.getElementById("message").innerText = messages[level - 1];
-    document.getElementById("progress").innerText = "Progress: " + level + "/50";
+function createHeart(){
+    const heart=document.createElement('div');
+    heart.classList.add('heart');
+
+    heart.innerHTML='❤';
+
+    heart.style.left=Math.random()*100+'vw';
+    heart.style.fontSize=(Math.random()*20+15)+'px';
+    heart.style.animationDuration=(Math.random()*5+5)+'s';
+
+    document.querySelector('.hearts').appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },10000);
 }
 
-function nextLevel() {
-    level++;
-    if(level > 50) {
-        document.getElementById("game").classList.add("hidden");
-        document.getElementById("end").classList.remove("hidden");
-    } else {
-        updateLevel();
-    }
-}
+setInterval(createHeart,300);
+
 </script>
 
 </body>
