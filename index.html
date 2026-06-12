@@ -3,333 +3,271 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Love ❤️</title>
+<title>For My Rizin ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:linear-gradient(135deg,#1a001f,#330033,#4d004d);
-    color:white;
-    overflow-x:hidden;
+background:linear-gradient(135deg,#ffd6e8,#e8d5ff);
+overflow-x:hidden;
+color:#fff;
 }
 
+/* FLOATING HEARTS */
+.heart{
+position:fixed;
+bottom:-20px;
+color:#ff4d88;
+font-size:20px;
+animation:floatUp 10s linear infinite;
+opacity:0.7;
+}
+
+@keyframes floatUp{
+0%{transform:translateY(0);}
+100%{transform:translateY(-110vh);}
+}
+
+/* HERO */
 .hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:40px;
-}
-
-h1{
-    font-family:'Dancing Script',cursive;
-    font-size:5rem;
-    color:#ff9fd6;
-    margin-bottom:20px;
-}
-
-.subtitle{
-    font-size:1.2rem;
-    max-width:700px;
-    line-height:1.8;
-    color:#f7d9e8;
-}
-
-.btn{
-    margin-top:40px;
-    padding:15px 35px;
-    border:none;
-    border-radius:50px;
-    background:#ff4fa3;
-    color:white;
-    cursor:pointer;
-    font-size:1rem;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:scale(1.08);
-}
-
-.section{
-    padding:100px 10%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
 .card{
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(15px);
-    border-radius:25px;
-    padding:40px;
-    margin-bottom:40px;
-    box-shadow:0 0 20px rgba(255,105,180,.15);
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:25px;
+max-width:800px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
-.card h2{
-    color:#ff9fd6;
-    margin-bottom:20px;
+h1{
+font-size:3rem;
+color:#ff2e75;
 }
 
-.card p{
-    line-height:2;
-    color:#ffeef7;
+p{
+margin-top:15px;
+font-size:1.1rem;
 }
 
-.love-letter{
-    font-size:1.1rem;
+button{
+margin-top:20px;
+padding:12px 30px;
+border:none;
+border-radius:50px;
+background:#ff4d88;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
 }
 
-.reasons{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+button:hover{
+transform:scale(1.05);
+background:#ff2e75;
 }
 
-.reason{
-    background:rgba(255,255,255,.08);
-    padding:25px;
-    border-radius:20px;
+/* SECTIONS */
+.section{
+padding:70px 10%;
 }
 
-.reason h3{
-    color:#ff9fd6;
-    margin-bottom:10px;
+.box{
+background:white;
+color:#333;
+padding:25px;
+border-radius:20px;
+margin-bottom:25px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
-.final{
-    text-align:center;
-    padding:100px 10%;
+.box h2{
+color:#ff4d88;
+margin-bottom:10px;
 }
 
-.final h2{
-    font-family:'Dancing Script',cursive;
-    font-size:4rem;
-    color:#ff9fd6;
+/* QUOTES */
+.quote{
+text-align:center;
+font-size:1.2rem;
+color:#ff2e75;
+font-weight:600;
 }
 
-.final p{
-    max-width:800px;
-    margin:20px auto;
-    line-height:2;
-}
-
-.hearts{
-    position:fixed;
-    width:100%;
-    height:100%;
-    pointer-events:none;
-    overflow:hidden;
-    top:0;
-    left:0;
-}
-
-.heart{
-    position:absolute;
-    color:#ff5ca8;
-    animation:float linear infinite;
-}
-
-@keyframes float{
-    from{
-        transform:translateY(100vh);
-        opacity:1;
-    }
-    to{
-        transform:translateY(-100px);
-        opacity:0;
-    }
-}
-
+/* SECRET MESSAGE */
 .hidden{
-    display:none;
+display:none;
 }
 
-@media(max-width:768px){
-    h1{
-        font-size:3rem;
-    }
+.secret{
+margin-top:15px;
+color:#ff2e75;
+font-weight:600;
+text-align:center;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+color:white;
+font-weight:600;
 }
 </style>
 </head>
+
 <body>
 
-<div class="hearts"></div>
+<!-- HERO -->
+<div class="hero">
+<div class="card">
+<h1>Hey Rizin ❤️</h1>
 
-<section class="hero">
-    <h1>To My Beautiful Girl ❤️</h1>
+<p>
+Before you open your books...<br>
+I just want you to smile for a second 💖
+</p>
 
-    <p class="subtitle">
-        This page isn't just an apology.
-        It's everything I should have said, everything I should have understood,
-        and everything I want you to know from my heart.
-    </p>
+<button onclick="scrollDown()">Open My Heart 💌</button>
+</div>
+</div>
 
-    <button class="btn" onclick="showMessage()">
-        Open My Heart 💌
-    </button>
-</section>
+<!-- SECTIONS -->
+<div class="section">
 
-<div id="content" class="hidden">
+<div class="box">
+<h2>💌 My Love Letter</h2>
+<p>
+Dear Rizin,<br><br>
 
-<section class="section">
-    <div class="card">
-        <h2>I'm Sorry ❤️</h2>
+I know HSC is hard.<br>
+I know you feel tired sometimes.<br><br>
 
-        <p class="love-letter">
-            My love,
+But I also know something stronger...<br>
+You NEVER give up.<br><br>
 
-            I know I wasn't there for you the way I should have been.
-            During a time when you were already dealing with pain,
-            discomfort, exhaustion, and emotions that can feel overwhelming,
-            you deserved more understanding, more patience, and more support from me.
+Every page you study brings you closer to your dreams.<br>
+And I will always be here cheering for you.<br><br>
 
-            Looking back, I realize that I didn't give you the comfort you needed.
-            I didn't check on you enough.
-            I didn't make you feel as cared for as you deserved.
+You are not alone.<br>
+I’m with you in every step ❤️<br><br>
 
-            And for that, I am truly sorry.
+— Zaber
+</p>
+</div>
 
-            Not because I was forced to say it.
-            Not because I want to fix things quickly.
+<div class="box">
+<h2>🌸 Motivation for You</h2>
+<div class="quote" id="quote">
+Click below for motivation 💖
+</div>
+<center>
+<button onclick="newQuote()">Inspire Me ✨</button>
+</center>
+</div>
 
-            But because I genuinely understand that I hurt someone I deeply love.
-        </p>
-    </div>
+<div class="box">
+<h2>🎀 Study Reminder</h2>
+<p>
+Take your time.<br>
+Breathe.<br>
+Study slowly but steadily.<br><br>
 
-    <div class="card">
-        <h2>What I Want You To Know 🌸</h2>
+You are becoming your future self ❤️
+</p>
+</div>
 
-        <p>
-            Even on the days when you feel tired,
-            emotional,
-            irritated,
-            exhausted,
-            or completely drained...
+<div class="box">
+<h2>💖 Secret Message</h2>
+<center>
+<button onclick="showSecret()">Open Me ❤️</button>
+<div id="secret" class="hidden secret">
+I will always be proud of you, Rizin 💖
+</div>
+</center>
+</div>
 
-            You never become difficult to love.
+<div class="box">
+<h2>🌙 Night Message</h2>
+<p>
+If you're studying late night...<br><br>
 
-            You never become a burden.
+Drink water 💧<br>
+Take a deep breath 🌙<br>
+And remember...<br><br>
 
-            You never become "too much."
-
-            You deserve kindness.
-            You deserve patience.
-            You deserve understanding.
-
-            Most importantly,
-            you deserve someone who stays beside you through all of it.
-
-            I want to be that person.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>Things I Love About You ❤️</h2>
-
-        <div class="reasons">
-            <div class="reason">
-                <h3>Your Smile</h3>
-                <p>It can turn my worst day into my best day.</p>
-            </div>
-
-            <div class="reason">
-                <h3>Your Heart</h3>
-                <p>You care so deeply about the people you love.</p>
-            </div>
-
-            <div class="reason">
-                <h3>Your Strength</h3>
-                <p>You handle more than most people realize.</p>
-            </div>
-
-            <div class="reason">
-                <h3>Your Presence</h3>
-                <p>You make ordinary moments feel special.</p>
-            </div>
-
-            <div class="reason">
-                <h3>Your Kindness</h3>
-                <p>The world becomes softer because you're in it.</p>
-            </div>
-
-            <div class="reason">
-                <h3>Everything About You</h3>
-                <p>Simply because you're you.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="final">
-    <h2>I Love You ❤️</h2>
-
-    <p>
-        I can't change the moments when I failed to support you properly.
-        But I can learn from them.
-
-        I can listen better.
-
-        I can care better.
-
-        I can be more present.
-
-        I can be the partner you deserve.
-
-        Thank you for loving me even when I'm imperfect.
-
-        Thank you for being patient with me.
-
-        And if your heart allows it,
-        I'd love the chance to make things right.
-    </p>
-
-    <br>
-
-    <h3 style="color:#ff9fd6;font-size:2rem;">
-        Forever Yours ❤️
-    </h3>
-
-    <p style="font-size:1.3rem;">
-        — Zaber
-    </p>
-</section>
+Someone loves you a lot ❤️
+</p>
+</div>
 
 </div>
 
+<footer>
+Made with endless love ❤️ by Zaber for Rizin
+</footer>
+
 <script>
 
-function showMessage(){
-    document.getElementById('content').classList.remove('hidden');
-    window.scrollTo({
-        top: window.innerHeight,
-        behavior:'smooth'
-    });
+// SCROLL
+function scrollDown(){
+window.scrollTo({
+top:window.innerHeight,
+behavior:"smooth"
+});
 }
 
+// MOTIVATIONAL QUOTES
+const quotes=[
+"You are stronger than your stress ❤️",
+"One chapter at a time 📚",
+"I believe in you always 💖",
+"Your future self is proud of you 🌸",
+"Keep going princess 👑",
+"Hard work always pays off ✨",
+"You are doing amazing ❤️",
+"Don’t give up now 🌙",
+"Study today, shine tomorrow 🌟",
+"You are my pride 💖"
+];
+
+function newQuote(){
+let q = quotes[Math.floor(Math.random()*quotes.length)];
+document.getElementById("quote").innerHTML=q;
+}
+
+// SECRET MESSAGE
+function showSecret(){
+document.getElementById("secret").classList.remove("hidden");
+}
+
+// FLOATING HEARTS
 function createHeart(){
-    const heart=document.createElement('div');
-    heart.classList.add('heart');
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
 
-    heart.innerHTML='❤';
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=Math.random()*20+10+"px";
+heart.style.animationDuration=(Math.random()*5+5)+"s";
 
-    heart.style.left=Math.random()*100+'vw';
-    heart.style.fontSize=(Math.random()*20+15)+'px';
-    heart.style.animationDuration=(Math.random()*5+5)+'s';
+document.body.appendChild(heart);
 
-    document.querySelector('.hearts').appendChild(heart);
-
-    setTimeout(()=>{
-        heart.remove();
-    },10000);
+setTimeout(()=>{heart.remove();},10000);
 }
 
 setInterval(createHeart,300);
